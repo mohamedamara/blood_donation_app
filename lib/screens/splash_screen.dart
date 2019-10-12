@@ -1,6 +1,33 @@
+import 'dart:async';
+
+import 'package:blood_donation_app/screens/intro_screen_carousel.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator. pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => IntroScreenCarousel(),
+        ),
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
