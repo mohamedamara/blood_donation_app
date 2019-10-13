@@ -9,8 +9,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'blood donation',
-      theme: ThemeData(
-      ),
       home: SplashScreen(),
     );
   }

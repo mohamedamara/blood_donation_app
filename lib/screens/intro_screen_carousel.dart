@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../widgets/intro_screen_dots.dart';
 import '../models/intro_screen_model.dart';
@@ -57,7 +58,7 @@ class _IntroScreenCarouselState extends State<IntroScreenCarousel> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => IntroScreenCarousel(),
+                        builder: (context) => LoginScreen(),
                       ),
                     );
                   },
