@@ -1,5 +1,5 @@
-import 'package:blood_donation_app/widgets/intro_screen_dots.dart';
 import 'package:flutter/material.dart';
+import '../widgets/intro_screen_dots.dart';
 import '../models/intro_screen_model.dart';
 import '../widgets/intro_screen_item.dart';
 
@@ -44,7 +44,36 @@ class _IntroScreenCarouselState extends State<IntroScreenCarousel> {
                     IntroScreenDots(false)
               ],
             ),
-          )
+          ),
+          if ((_currentPage + 1) == introScreenList.length)
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 16),
+                height: 35,
+                width: 85,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => IntroScreenCarousel(),
+                      ),
+                    );
+                  },
+                  child: Center(
+                    child: Text(
+                      "FINISH",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
         ],
       ),
     );
