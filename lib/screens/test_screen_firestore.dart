@@ -6,6 +6,7 @@ class TestScreenFirestore extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          color: Colors.amber,
 //          child: StreamBuilder(
 //            stream: Firestore.instance.collection("testCollection").snapshots(),
 //            builder: (context, snapshot) {
