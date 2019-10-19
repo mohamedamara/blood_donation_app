@@ -22,7 +22,15 @@ class IntroScreenItem extends StatelessWidget {
                   children: <Widget>[
                     Positioned(
                       top: 100,
-                      child: Image.asset(introScreenModel.imageURL),
+                      child: Container(
+                        height: 250,
+                        width: 350,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(introScreenModel.imageURL),
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
                     )
                   ],
                 ),
